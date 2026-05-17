@@ -28,17 +28,28 @@ Outputs classic test patterns (SMPTE, PM5544, color bars, etc.) with an optional
 
 ## Installation
 
-### 1. Flash Raspberry Pi OS Lite
+### 1. Flash SD Card
 
-Use Raspberry Pi Imager. In settings:
-- Set hostname: `testpattern`
-- Enable SSH
-- Set username/password
-- Configure WiFi
+1. Download and install [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+2. Insert your SD card (8GB+ recommended)
+3. Open Raspberry Pi Imager and select:
+   - **Device:** Raspberry Pi 3
+   - **OS:** Raspberry Pi OS Lite (64-bit) — under "Raspberry Pi OS (other)"
+   - **Storage:** Your SD card
+4. Click the gear icon (⚙) or "Edit Settings" to configure:
+   - **Hostname:** `testpattern`
+   - **Username:** `admin`
+   - **Password:** `admin`
+   - **WiFi:** Your network SSID and password
+   - **Enable SSH:** Yes (use password authentication)
+   - **Locale:** Your timezone
+5. Click "Write" and wait for it to complete
 
 ### 2. Add Display Config
 
-After flashing, add the contents of `config/config.txt.additions` to `/boot/firmware/config.txt` on the Pi:
+Before ejecting the SD card, open the `bootfs` volume and edit `config.txt` (on macOS/Linux) or access it after first boot via SSH at `/boot/firmware/config.txt`.
+
+Add these lines to the end of the file:
 
 ```
 dtoverlay=vc4-kms-v3d,composite=1
