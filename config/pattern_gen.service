@@ -1,0 +1,12 @@
+[Unit]
+Description=Test Pattern Generator
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/admin/pattern_gen.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

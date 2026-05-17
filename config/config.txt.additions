@@ -1,0 +1,13 @@
+# Add these lines to /boot/firmware/config.txt on Raspberry Pi
+# For Pi Test Signal Generator with piscreen SPI display
+
+# === Test Pattern Generator Config ===
+dtoverlay=vc4-kms-v3d,composite=1
+gpu_mem=256
+max_framebuffers=2
+enable_tvout=1
+sdtv_mode=0
+sdtv_aspect=1
+dtoverlay=disable-bt
+dtoverlay=piscreen,speed=16000000,rotate=270
+dtparam=spi=on
