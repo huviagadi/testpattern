@@ -2,13 +2,13 @@
 
 Test signal generator for Raspberry Pi with composite/HDMI output and SPI touchscreen control.
 
-Outputs classic test patterns (SMPTE, PM5544, color bars, etc.) with an optional 3D rotating artist name overlay for luma keying in video synthesis setups.
+Outputs classic test patterns (SMPTE, PM5544, color bars, etc.) with an optional 2D rotating artist name overlay for luma keying in video synthesis setups.
 
 ## Hardware
 
 - Raspberry Pi 3B+ (or similar)
 - PiScreen 3.5" SPI touchscreen (480x320, ILI9486 + ADS7846 touch)
-- Composite video output (active) or HDMI
+- Composite video output or HDMI, both outputs active for easy testing of displays
 
 ## Patterns
 
