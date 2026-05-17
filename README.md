@@ -1,4 +1,4 @@
-# Pi Test Pattern Generator
+# testpattern - Pi Test Pattern Generator
 
 Test signal generator for Raspberry Pi with composite/HDMI output and SPI touchscreen control.
 
