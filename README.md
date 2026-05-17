@@ -114,6 +114,7 @@ sudo systemctl restart pattern_gen.service
 ### Adding Patterns
 
 Edit `pattern_gen.py` to add new test patterns. Each pattern is a function that draws to the framebuffer. See existing patterns like `draw_smpte()` for examples.
+I may add an example of drawing an image to the framebuffer, so real-life test card examples could be added as staatic images.
 
 ### Display Settings
 
